@@ -1,0 +1,19 @@
+log_level            	    :info
+log_location             	     STDOUT
+node_name                     'ramakrishna'
+client_key                      '/root/.chef/ramakrishna.pem'
+validation_client_name  'validator'
+validation_key          '/root/.chef/validator.pem'
+chef_server_url         'https://chef.example.com:443/organizations/chefserver'
+syntax_check_cache_path  '/root/.chef/syntax_check_cache'
+cookbook_path 	      '/root/.chef/cookbooks'
+
+
+log_level                 :info
+log_location              STDOUT
+node_name                 'chef-bootstrap'
+client_key                "#{ENV['HOME']}/.chef/ramakrishna.pem"
+validation_client_name    'chef-validator'
+validation_key            "#{ENV['HOME']}/.chef/validator.pem"
+chef_server_url           'https://fgtd-chef-nte1-app001.mhint'
+syntax_check_cache_path   "#{ENV['HOME']}/.chef/syntax_check_cache"
