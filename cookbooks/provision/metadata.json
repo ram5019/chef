@@ -1,0 +1,29 @@
+{
+  "name": "provision",
+  "version": "0.1.0",
+  "description": "Installs/Configures provision",
+  "long_description": "Installs/Configures provision",
+  "maintainer": "Daniel Ku",
+  "maintainer_email": "kjunine@gmail.com",
+  "license": "MIT",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  }
+}
