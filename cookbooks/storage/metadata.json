@@ -1,0 +1,55 @@
+{
+  "name": "storage",
+  "description": "Installs/Configures storage",
+  "long_description": "# storage-cookbook\n\n[![Cookbook Version](https://img.shields.io/cookbook/v/storage.svg?style=flat)](https://supermarket.getchef.com/cookbooks/storage)\n[![Build Status](http://img.shields.io/travis/evertrue/storage-cookbook.svg?style=flat)](https://travis-ci.org/evertrue/storage-cookbook)\n[![Coverage Status](http://img.shields.io/coveralls/evertrue/storage-cookbook.svg?style=flat)](https://coveralls.io/r/evertrue/storage-cookbook)\n\nA cookbook for mounting all available EC2 ephemeral volumes and saving their\nrespective mount points into node attributes.\n\n## Supported Platforms\n\nEC2 only (but it will fail cleanly on other platforms).\n\n## Attributes\n\n<table>\n  <tr>\n    <th>Key</th>\n    <th>Type</th>\n    <th>Description</th>\n    <th>Default</th>\n  </tr>\n  <tr>\n    <td><tt>['storage']['ephemeral_mounts']</tt></td>\n    <td>Array</td>\n    <td>An array of strings, set automatically by the recipe, to be used by other cookbooks, which lists the mount points of ephemeral storage devices.</td>\n    <td><tt>automatic</tt></td>\n  </tr>\n</table>\n\n## Usage\n\n### Recipes\n\n#### storage::default\n\nInclude `storage` in a wrapper cookbook:\n\n```ruby\ninclude_recipe 'storage::default'\n```\n\n...or include `storage` in your node's `run_list`:\n\n```json\n{\n  \"run_list\": [\n    \"recipe[storage::default]\"\n  ]\n}\n```\n\n### Resources\n\n#### format_mount\n\nFormats a device, creates a mount point for it, and the mounts it.\n\n##### Attributes\n\n* **mount_point** (name attribute) The directory where the filesystem should be mounted\n* **device_name** The path to the device (typically starts with `/dev`)\n* **fs_type** Filesystem type to use for formatting (default: `ext4`)\n* **reserved_space** Percentage of space to reserve for the superuser (default: `0`)\n\ne.g.\n```ruby\n  storage_format_mount '/mnt/dev0' do\n    device_name    '/dev/xvdb1'\n    fs_type        'ext4'\n    reserved_space 5\n  end\n```\n\n## Contributing\n\n1. Fork the repository on Github\n2. Create a named feature branch (i.e. `add-new-recipe`)\n3. Write you change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request\n\n## License and Authors\n\nAuthor:: EverTrue, Inc. (<eric.herot@evertrue.com>)\n",
+  "maintainer": "EverTrue, Inc.",
+  "maintainer_email": "eric.herot@evertrue.com",
+  "license": "Apache v2.0",
+  "platforms": {
+    "ubuntu": ">= 12.04"
+  },
+  "dependencies": {
+    "ohai": ">= 0.0.0",
+    "et_fog": "~> 4.0",
+    "aws": "~> 4.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "6.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+    [
+      "~> 12.10"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
