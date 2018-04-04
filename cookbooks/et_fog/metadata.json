@@ -1,0 +1,53 @@
+{
+  "name": "et_fog",
+  "description": "Installs/Configures the Fog ruby library",
+  "long_description": "[![Cookbook Version](https://img.shields.io/cookbook/v/et_fog.svg?style=flat)](https://supermarket.getchef.com/cookbooks/et_fog)\n[![Build Status](http://img.shields.io/travis/evertrue/et_fog-cookbook.svg?style=flat)](https://travis-ci.org/evertrue/et_fog-cookbook)\n\n# et_fog cookbook\n\nInstalls & configures the Fog Ruby library as a Chef Gem. Use this cookbook if you want to use Fog as part of another cookbook.\n\n# Requirements\n\n* `build-essential`\n* `apt`\n* `git`\n\n# Usage\n\nInclude `et_fog::default` in your node’s run list.\n\nIf you need to customize the dependencies installed for nokogiri on your system, specify them in an array in `node['et_fog']['dependencies']` in a wrapper cookbook\n\n# Recipes\n\n## default\n\n1. Installs the necessary dependencies for the `fog` gem.\n2. Installs `fog` and `unf`, which helps `fog` play nicely with strings and AWS.\n\n# Author\n\nAuthor:: EverTrue, Inc. (<devops@evertrue.com>)\n",
+  "maintainer": "EverTrue, Inc.",
+  "maintainer_email": "devops@evertrue.com",
+  "license": "Apache v2.0",
+  "platforms": {
+    "ubuntu": "= 14.04"
+  },
+  "dependencies": {
+    "build-essential": ">= 2.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "4.0.1",
+  "source_url": "https://github.com/evertrue/et_fog-cookbook/",
+  "issues_url": "https://github.com/evertrue/et_fog-cookbook/issues",
+  "privacy": false,
+  "chef_versions": [
+    [
+      "~> 12.10"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
