@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  config_rb:
+    environments: dev
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: server
+    run_list:
+      - recipe[et_elk::server]
+      - role[es_master]
+      - recipe[et_elk_postop]
